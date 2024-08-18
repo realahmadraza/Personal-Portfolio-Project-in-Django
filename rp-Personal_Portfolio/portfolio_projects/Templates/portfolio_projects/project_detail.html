@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<h1>{{ projects.tittle }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        {% if projects.image %}
+            <img src="{{ projects.image.url }}" width="100%">
+        {% endif %}
+    </div>
+    <div class="col-md-4">
+        <h5>About the project:</h5>
+        <p>{{ projects.description }}</p>
+        <br>
+        <h5>Technology used:</h5>
+        <p>{{ projects.technology }}</p>
+    </div>
+</div>
+{% endblock page_content %}
